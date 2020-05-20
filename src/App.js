@@ -8,7 +8,7 @@ class App extends React.Component {
     super();
     this.state = {
       quote: quotes[0].quote,
-      author: quotes[0].author,
+      
     };
   }
   randomQuote() {
