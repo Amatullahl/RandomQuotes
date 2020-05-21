@@ -3,6 +3,15 @@ import Quote from "./Quote";
 import quotes from './StoredQuotes'
 import "./App.css";
 
+/*
+Like that you imported quotes from another file instead of putting them all in this file
+
+Another way to write state in a class component that you will encounter will simply be 
+state = {} without the constructor, super, etc.
+
+Either are acceptable
+*/
+
 class App extends React.Component {
   constructor() {
     super();
@@ -11,6 +20,7 @@ class App extends React.Component {
       
     };
   }
+  //Make all functions arrow functions so randomQuote = () => {return ();}
   randomQuote() {
     const randomNumber = Math.floor(Math.random() * quotes.length);
     return quotes[randomNumber];
@@ -35,7 +45,7 @@ class App extends React.Component {
       ${Math.floor(Math.random() * 155)})`;
     return color;
   }
-  
+  //You consider naming Quote QuoteCard instead so we have a better understanding of what is being displayed
   render() {
     return (
       <div>
