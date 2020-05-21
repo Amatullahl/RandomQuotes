@@ -1,5 +1,14 @@
 import React from "react";
 
+/*
+This is a good place to use a functional component because this child component does not 
+contain state. Write as follows:
+const Quote = (props) => {}
+
+
+You can pull variables out of props like 
+const Quote = ({quote, handleClick, etc.}) => {}
+*/
 class Quote extends React.Component {
   render() {
     const randomColor = this.props.displayColor();
